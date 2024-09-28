@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import StockContext from "./contexts/StockContext.js";
 import StockForm from "./components/StockForm.jsx";
+import icon from "./components/icon.jpg"; // Import the logo
 
 function App() {
   const [stockList, setStockList] = useState([]);
@@ -20,9 +21,14 @@ function App() {
 
   return (
     <StockContext.Provider value={value}>
-      <div>
-        <h1>Finance Dashboard</h1>
-        <h2>Stock Management Application</h2>
+      <div className="app-container">
+        <div className="header">
+          <img src={icon} alt="App Logo" className="logo" />
+          <div className="titles">
+            <h1>Finance Dashboard</h1>
+            <h2>Stock Management Application</h2>
+          </div>
+        </div>
         <div className="clock">Current Date and Time: {currentDateTime}</div>
         <StockForm />
       </div>
