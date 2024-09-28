@@ -1,0 +1,71 @@
+#root {
+  width: 100%;
+  margin: 0 0 auto;
+  padding: 8px;
+  text-align: center;
+  background-color: #f4f4f4; /* Light gray background for the entire app */
+}
+
+.header {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Center items horizontally */
+  margin-bottom: 16px; /* Space between header and card */
+}
+
+.logo {
+  height: 96px;
+  padding: 24px;
+  will-change: filter;
+  transition: filter 300ms;
+  margin-right: 20px; /* Space between the icon and the titles */
+}
+
+.clock {
+  font-size: 16px; /* Adjust the font size */
+  margin: 16px 0; /* Space above and below the clock */
+  color: #333; /* Darker color for better visibility */
+}
+
+.titles {
+  text-align: left; /* Align titles to the left */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  background-color: white; /* White background for cards */
+  padding: 32px; /* Space inside cards */
+  border-radius: 12px; /* Rounded corners */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  margin-bottom: 32px; /* Space below cards */
+}
+
+/* Additional styles for better structure and responsiveness */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column; /* Stack items on smaller screens */
+    align-items: center; /* Center items */
+  }
+
+  .logo {
+    margin-bottom: 16px; /* Space below the logo on small screens */
+  }
+
+  .clock {
+    font-size: 16px; /* Slightly smaller font on mobile */
+  }
+}
