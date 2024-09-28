@@ -3,8 +3,8 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "/stock-purchases/",
   plugins: [react()],
+  base: "/stock-purchases/",
   test: {
     globals: true,
     environment: "happy-dom",
